@@ -1,81 +1,46 @@
 # 🎯 MAOL Ad Creatives — Claude Skill
 
-> Скилл для Claude, который пишет тексты рекламных креативов — статику и видео — по фирменной структуре агентства **MAOL**, с обязательным анализом аудитории перед генерацией текста.
+> A Claude Skill that writes ad creative copy — static and video — following MAOL agency's proven structure, with mandatory audience analysis before any copy gets written.
 
 ---
 
-## 📋 Что внутри репозитория
+## 📋 What's in this repository
 
 ```
 maol-ad-creatives-repo/
-├── SKILL.md                        ← инструкция для Claude (сердце скилла)
-├── README.md                       ← этот файл
+├── SKILL.md                        ← the instructions Claude follows (the heart of the skill)
+├── README.md                       ← this file
 └── references/
-    ├── static-examples.md          ← реальные примеры статики по нишам
-    └── video-examples.md           ← реальные примеры видео-сценариев по нишам
+    ├── static-examples.md          ← real static creative examples by niche
+    └── video-examples.md           ← real video script examples by niche
 ```
 
 ---
 
-## ⚙️ Как это работает — пошагово
+## ⚙️ How it works — step by step
 
-Когда кто-то в команде просит Claude написать креативы, скилл проводит его через строгий процесс — без «текстов с потолка»:
+When someone on the team asks Claude to write creatives, the skill runs a strict process instead of guessing pain points out of thin air:
 
-| Шаг | Что происходит |
+| Step | What happens |
 |---|---|
-| **1️⃣ Материалы** | Claude запрашивает лендинг, бриф, запись брифинга или другие материалы по клиенту |
-| **2️⃣ Анализ** | Делает короткий разбор аудитории и ниши на основе материалов |
-| **3️⃣ Боли** | Формирует список из 4–8 кандидатов болей/углов подачи |
-| **4️⃣ Подтверждение** | Спрашивает, какие боли брать в работу — не решает сам |
-| **5️⃣ Тексты** | Пишет 4–5 креативов (статика или видео) по фирменной 7-элементной структуре MAOL, каждый с разным углом подачи |
-| **6️⃣ 🧑‍🤝‍🧑 Панель персон** | Собирает 5 глубоких персон целевой аудитории, прогоняет каждый креатив через них и ранжирует по релевантности |
-| **7️⃣ Продающий текст** | По запросу — пишет развёрнутый текст-описание под креатив (primary text для Meta и т.д.) |
+| **1️⃣ Materials** | Claude asks for the landing page, brief, briefing recording, or other client materials |
+| **2️⃣ Analysis** | Produces a short audience and niche analysis based on those materials |
+| **3️⃣ Pain points** | Lists 4–8 candidate pain points / angles |
+| **4️⃣ Confirmation** | Asks which pains to actually work with — never decides on its own |
+| **5️⃣ Copy** | Writes 4–5 creatives (static or video) using MAOL's 7-element structure, each from a different angle |
+| **6️⃣ 🧑‍🤝‍🧑 Persona panel** | Builds 5 in-depth target-audience personas, runs every creative past them, and ranks the creatives by relevance |
+| **7️⃣ Sales caption** | On request, writes the expanded caption/description text that goes under the creative (e.g. Meta's primary text) |
 
-В конце — всегда напоминание: это черновик, требует ручной проверки перед публикацией.
-
----
-
-## 🧱 Структура креатива (фирменная для MAOL)
-
-Каждый креатив строится на **7 элементах в 3 разделах**:
-
-**Раздел 1 — Крючок**
-1. Заголовок (Боль)
-2. Підзаголовок
-
-**Раздел 2 — Ценность**
-3. Тригери
-4. Буллити
-5. Автор/компанія *(опційно)*
-
-**Раздел 3 — Закриття**
-6. Бонус/ціна *(якщо є)*
-7. CTA
-
-Видео — та же структура, но развёрнутая в цельный монолог; статика — сжатая версия на пару строк.
+Every response ends with a reminder: this is a draft, not a final deliverable — always review and edit by hand before it goes live.
 
 ---
 
-## 🎥 Форматы
+## 🧱 Creative structure (MAOL's house format)
 
-- **Статика** — короткий текст для картинки
-- **Видео** — чистая речь для озвучки, без раскадровки и таймкодов (продакшн — на усмотрение клиента), с приложенным ТЗ на съёмку
+Every creative is built from **7 elements across 3 sections**:
 
----
+**Section 1 — Hook**
+1. Headline (Pain)
+2. Subheadline
 
-## 🚀 Установка
-
-1. Скачай `.skill`-файл (собирается из этой папки — см. ниже)
-2. Открой Claude.ai → новый чат → прикрепи `.skill`-файл как вложение
-3. Нажми **Save skill** на появившейся карточке
-4. Готово — скилл активен и будет сам подключаться, когда попросишь написать креативы
-
-### Пересборка `.skill`-файла после правок
-
-Если меняешь `SKILL.md` или файлы в `references/`, скилл нужно перепаковать заново перед раздачей команде — через `package_skill.py` из официального skill-creator.
-
----
-
-## 🔒 Использование
-
-Внутренний инструмент агентства **MAOL**. Репозиторий приватный — внутри реальные тексты и наработки клиентов.
+**Section 2 — Value**
