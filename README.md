@@ -44,3 +44,38 @@ Every creative is built from **7 elements across 3 sections**:
 2. Subheadline
 
 **Section 2 — Value**
+3. Triggers
+4. Bullets
+5. Author/brand *(optional)*
+
+**Section 3 — Close**
+6. Bonus/price *(if applicable)*
+7. CTA
+
+Video follows the same structure but expanded into a full monologue; static is the compressed, on-image version.
+
+---
+
+## 🎥 Formats
+
+- **Static** — short copy for an image ad
+- **Video** — plain narration meant to be read on camera, no shot breakdowns or timecodes (filming is left to the client's team), with a standard filming brief attached
+
+---
+
+## 🚀 Installation
+
+1. Download the `.skill` file (packaged from this folder — see below)
+2. Open Claude.ai → start a new chat → attach the `.skill` file
+3. Click **Save skill** on the card that appears
+4. Done — the skill is now active and will kick in automatically when you ask for ad creatives
+
+### Repackaging the `.skill` file after edits
+
+If you edit `SKILL.md` or the files under `references/`, repackage the skill before handing it to the team — using `package_skill.py` from the official skill-creator.
+
+---
+
+## 🔒 Usage
+
+Internal tool for **MAOL** agency. This repository is private — it contains real client copy and work product.
